@@ -123,6 +123,71 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &151757206
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3976043241395976482, guid: 78e2a175e2f97465cafc226ce8684cc2, type: 3}
+      propertyPath: m_Name
+      value: Obstacle-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976043241395976482, guid: 78e2a175e2f97465cafc226ce8684cc2, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976043241395976486, guid: 78e2a175e2f97465cafc226ce8684cc2, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976043241395976486, guid: 78e2a175e2f97465cafc226ce8684cc2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5.255343
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976043241395976486, guid: 78e2a175e2f97465cafc226ce8684cc2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -35.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976043241395976486, guid: 78e2a175e2f97465cafc226ce8684cc2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976043241395976486, guid: 78e2a175e2f97465cafc226ce8684cc2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976043241395976486, guid: 78e2a175e2f97465cafc226ce8684cc2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976043241395976486, guid: 78e2a175e2f97465cafc226ce8684cc2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976043241395976486, guid: 78e2a175e2f97465cafc226ce8684cc2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976043241395976486, guid: 78e2a175e2f97465cafc226ce8684cc2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976043241395976486, guid: 78e2a175e2f97465cafc226ce8684cc2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976043241395976486, guid: 78e2a175e2f97465cafc226ce8684cc2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976043241395976486, guid: 78e2a175e2f97465cafc226ce8684cc2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 78e2a175e2f97465cafc226ce8684cc2, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +419,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Launch Pad
       objectReference: {fileID: 0}
+    - target: {fileID: 61262727358668846, guid: 9981dde0122f849d7b24cba9ee2e8ec1, type: 3}
+      propertyPath: m_TagString
+      value: Friendly
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9981dde0122f849d7b24cba9ee2e8ec1, type: 3}
 --- !u!1001 &235913893923685359
@@ -411,6 +480,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Landing Pad
       objectReference: {fileID: 0}
+    - target: {fileID: 235913893381384059, guid: db2b2fb6625c54e5d8729cb9f982f118, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db2b2fb6625c54e5d8729cb9f982f118, type: 3}
 --- !u!1001 &2708469385729301515
@@ -423,6 +496,10 @@ PrefabInstance:
     - target: {fileID: 2708469384377495798, guid: 5bfd70207495c412b86136b1a3aa6dd5, type: 3}
       propertyPath: m_Name
       value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708469384377495798, guid: 5bfd70207495c412b86136b1a3aa6dd5, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 2708469384377495818, guid: 5bfd70207495c412b86136b1a3aa6dd5, type: 3}
       propertyPath: m_RootOrder
@@ -477,14 +554,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1799296342, guid: fe451e8a704b4406594323e40ca9a512, type: 3}
-      propertyPath: m_Drag
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1799296342, guid: fe451e8a704b4406594323e40ca9a512, type: 3}
-      propertyPath: m_Constraints
-      value: 56
-      objectReference: {fileID: 0}
     - target: {fileID: 3512030897854793792, guid: fe451e8a704b4406594323e40ca9a512, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -533,8 +602,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocket
       objectReference: {fileID: 0}
+    - target: {fileID: 3512030897854793796, guid: fe451e8a704b4406594323e40ca9a512, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe451e8a704b4406594323e40ca9a512, type: 3}
+--- !u!1 &3512030897271415045 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3512030897854793796, guid: fe451e8a704b4406594323e40ca9a512, type: 3}
+  m_PrefabInstance: {fileID: 3512030897271415044}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3512030897271415053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3512030897271415045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06cbd737e84614ee5bfcf4f97c542a9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3976043243137379257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -545,6 +635,10 @@ PrefabInstance:
     - target: {fileID: 3976043241395976482, guid: 78e2a175e2f97465cafc226ce8684cc2, type: 3}
       propertyPath: m_Name
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976043241395976482, guid: 78e2a175e2f97465cafc226ce8684cc2, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3976043241395976486, guid: 78e2a175e2f97465cafc226ce8684cc2, type: 3}
       propertyPath: m_RootOrder

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -16,11 +14,17 @@ public class Movement : MonoBehaviour
     // Rigid Body for Rocket
     Rigidbody rocketRigidBody;
 
+    // Aduio source for Rocket
+    AudioSource rocketAudioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         // Get component call
         rocketRigidBody = GetComponent<Rigidbody>();
+
+        // Get component for audio source
+        rocketAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -40,6 +44,18 @@ public class Movement : MonoBehaviour
 
             // Adding Relative Force
             rocketRigidBody.AddRelativeForce( Vector3.up * mainThrustValue * Time.deltaTime );
+
+            // If there is no audio playing while holding thrust, play the sound
+            if (!rocketAudioSource.isPlaying)
+            {
+                rocketAudioSource.Play();
+            }
+        }
+
+        else
+        {
+            // Stop playing the sound if the thrust isn't pressed down
+            rocketAudioSource.Stop();
         }
     }
 
