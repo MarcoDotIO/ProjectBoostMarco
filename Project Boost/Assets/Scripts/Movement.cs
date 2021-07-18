@@ -11,11 +11,14 @@ public class Movement : MonoBehaviour
     // Main Right value for relative Right rotation
     [SerializeField] float mainRightValue = 200f;
 
+    // Engine thrust SFX
+    [SerializeField] AudioClip engineThrustSFX;
+
     // Rigid Body for Rocket
     Rigidbody rocketRigidBody;
 
     // Aduio source for Rocket
-    AudioSource rocketAudioSource;
+    public AudioSource rocketMovementAudioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +27,7 @@ public class Movement : MonoBehaviour
         rocketRigidBody = GetComponent<Rigidbody>();
 
         // Get component for audio source
-        rocketAudioSource = GetComponent<AudioSource>();
+        rocketMovementAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -46,16 +49,16 @@ public class Movement : MonoBehaviour
             rocketRigidBody.AddRelativeForce( Vector3.up * mainThrustValue * Time.deltaTime );
 
             // If there is no audio playing while holding thrust, play the sound
-            if (!rocketAudioSource.isPlaying)
+            if (!rocketMovementAudioSource.isPlaying)
             {
-                rocketAudioSource.Play();
+                rocketMovementAudioSource.PlayOneShot(engineThrustSFX);
             }
         }
 
         else
         {
             // Stop playing the sound if the thrust isn't pressed down
-            rocketAudioSource.Stop();
+            rocketMovementAudioSource.Stop();
         }
     }
 
