@@ -69,8 +69,6 @@ public class CollisionHandler : MonoBehaviour
     // Disables controls and restarts level
     void StartCrashSequence()
     {
-        // TODO: Add particle effects
-
         if (!isTransitioning && isAlive)
         {
             // The ship isn't alive anymore
@@ -81,6 +79,8 @@ public class CollisionHandler : MonoBehaviour
 
             // Stop thruster audio
             GetComponent<Movement>().rocketMovementAudioSource.Stop();
+
+            GetComponent<Movement>().StopThrusterParticles();
 
             // Play crashing sound
             rocketCollisionAudioSource.PlayOneShot(crashedAudio);
@@ -96,8 +96,6 @@ public class CollisionHandler : MonoBehaviour
     // Disable controls and start the next level
     void StartNextLevelSequence()
     {
-        // TODO: Add particle effects
-
         if (!isTransitioning && isAlive)
         {
             // We are transitioning

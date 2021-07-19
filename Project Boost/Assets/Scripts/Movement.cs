@@ -14,6 +14,15 @@ public class Movement : MonoBehaviour
     // Engine thrust SFX
     [SerializeField] AudioClip engineThrustSFX;
 
+    // Particle effect for left thruster
+    [SerializeField] ParticleSystem leftThrusterParticle;
+
+    // Particle effect for right thruster
+    [SerializeField] ParticleSystem rightThrusterParticle;
+
+    // Particle effect for main thruster
+    [SerializeField] ParticleSystem mainThrusterParticle;
+
     // Rigid Body for Rocket
     Rigidbody rocketRigidBody;
 
@@ -53,12 +62,18 @@ public class Movement : MonoBehaviour
             {
                 rocketMovementAudioSource.PlayOneShot(engineThrustSFX);
             }
+
+            // Start the thruster particle systems
+            StartThrusterParticles();
         }
 
         else
         {
             // Stop playing the sound if the thrust isn't pressed down
             rocketMovementAudioSource.Stop();
+
+            // Stop the thruster particle systems
+            StopThrusterParticles();
         }
     }
 
@@ -105,6 +120,22 @@ public class Movement : MonoBehaviour
 
         // Unfreezing for physics control.
         rocketRigidBody.freezeRotation = false;
+    }
+
+    void StartThrusterParticles()
+    {
+        // Play the three main thruster particle loops
+        mainThrusterParticle.Play();
+        leftThrusterParticle.Play();
+        rightThrusterParticle.Play();
+    }
+
+    public void StopThrusterParticles()
+    {
+        // Stop the three main thruster particle loops
+        mainThrusterParticle.Stop();
+        leftThrusterParticle.Stop();
+        rightThrusterParticle.Stop();
     }
 
 }
