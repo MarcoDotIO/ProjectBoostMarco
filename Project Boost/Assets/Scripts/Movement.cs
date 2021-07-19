@@ -51,29 +51,14 @@ public class Movement : MonoBehaviour
     {
         if ( Input.GetKey( KeyCode.W ) || Input.GetKey( KeyCode.Space ) )
         {
-            // Logging for debug
-            Debug.Log("Pressed Space - Thrusters");
-
-            // Adding Relative Force
-            rocketRigidBody.AddRelativeForce( Vector3.up * mainThrustValue * Time.deltaTime );
-
-            // If there is no audio playing while holding thrust, play the sound
-            if (!rocketMovementAudioSource.isPlaying)
-            {
-                rocketMovementAudioSource.PlayOneShot(engineThrustSFX);
-            }
-
-            // Start the thruster particle systems
-            StartThrusterParticles();
+            // Enable the main thruster
+            OnEnableMainThruster();
         }
 
         else
         {
-            // Stop playing the sound if the thrust isn't pressed down
-            rocketMovementAudioSource.Stop();
-
-            // Stop the thruster particle systems
-            StopThrusterParticles();
+            // Disable the main thruster
+            OnDisableMainThruster();
         }
     }
 
@@ -122,6 +107,7 @@ public class Movement : MonoBehaviour
         rocketRigidBody.freezeRotation = false;
     }
 
+    // Starting the main three thruster particles
     void StartThrusterParticles()
     {
         // Play the three main thruster particle loops
@@ -130,6 +116,7 @@ public class Movement : MonoBehaviour
         rightThrusterParticle.Play();
     }
 
+    // Stopping the main three thruster particles
     public void StopThrusterParticles()
     {
         // Stop the three main thruster particle loops
@@ -138,4 +125,35 @@ public class Movement : MonoBehaviour
         rightThrusterParticle.Stop();
     }
 
+    // On enabling the main thruster
+    void OnEnableMainThruster()
+    {
+        // Logging for debug
+        Debug.Log("Pressed Space - Thrusters");
+
+        // Adding Relative Force
+        rocketRigidBody.AddRelativeForce(Vector3.up * mainThrustValue * Time.deltaTime);
+
+        // If there is no audio playing while holding thrust, play the sound
+        if (!rocketMovementAudioSource.isPlaying)
+        {
+            rocketMovementAudioSource.PlayOneShot(engineThrustSFX);
+        }
+
+        // Start the thruster particle systems
+        if (!mainThrusterParticle.isPlaying && !leftThrusterParticle.isPlaying && !rightThrusterParticle.isPlaying)
+        {
+            StartThrusterParticles();
+        }
+    }
+
+    // On disabling the main thruster
+    void OnDisableMainThruster()
+    {
+        // Stop playing the sound if the thrust isn't pressed down
+        rocketMovementAudioSource.Stop();
+
+        // Stop the thruster particle systems
+        StopThrusterParticles();
+    }
 }

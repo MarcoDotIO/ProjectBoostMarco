@@ -30,14 +30,39 @@ public class CollisionHandler : MonoBehaviour
     // Is the rocket still alive?
     public bool isAlive = true;
 
+    // Is collision on?
+    bool collisionDisable = false;
+
     void Start()
     {
         rocketCollisionAudioSource = GetComponent<AudioSource>();
     }
 
+    void Update()
+    {
+        RespondToDebugKeys();
+    }
+
+    void RespondToDebugKeys()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LoadNextLevel();
+        }
+
+        else if (Input.GetKeyDown(KeyCode.C))
+        {
+            // Toggling collision
+            collisionDisable = !collisionDisable;
+        }
+    }
+
     // Collision Handler Function
     void OnCollisionEnter(Collision collision)
     {
+        // If collision is disabled, return
+        if (collisionDisable) { return; }
+
         // Tag switch statement for item collision
         switch (collision.gameObject.tag)
         {
@@ -80,6 +105,7 @@ public class CollisionHandler : MonoBehaviour
             // Stop thruster audio
             GetComponent<Movement>().rocketMovementAudioSource.Stop();
 
+            // Stop thruster particles
             GetComponent<Movement>().StopThrusterParticles();
 
             // Play crashing sound
@@ -106,6 +132,9 @@ public class CollisionHandler : MonoBehaviour
 
             // Stop thruster audio
             GetComponent<Movement>().rocketMovementAudioSource.Stop();
+
+            // Stop thruster particles
+            GetComponent<Movement>().StopThrusterParticles();
 
             // Play landing sound
             rocketCollisionAudioSource.PlayOneShot(landedAudio);
