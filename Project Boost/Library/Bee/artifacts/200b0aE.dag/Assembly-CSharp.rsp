@@ -303,8 +303,11 @@
 -r:"/Applications/Unity/Hub/Editor/2021.1.15f1/Unity.app/Contents/NetStandard/Extensions/2.0.0/System.Numerics.Vectors.dll"
 -r:"/Applications/Unity/Hub/Editor/2021.1.15f1/Unity.app/Contents/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll"
 -r:"/Applications/Unity/Hub/Editor/2021.1.15f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll"
+-r:"/Volumes/Backups-SAMSUNG/Root-Dir-Backup Jul 16 2021/dev/3D-dev/Unity-dev/ProjectBoostMarco/Project Boost/Library/PackageCache/com.unity.cinemachine@2.7.4/Runtime/ThirdParty/clipper_library.dll"
 -r:"/Volumes/Backups-SAMSUNG/Root-Dir-Backup Jul 16 2021/dev/3D-dev/Unity-dev/ProjectBoostMarco/Project Boost/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll"
 -r:"/Volumes/Backups-SAMSUNG/Root-Dir-Backup Jul 16 2021/dev/3D-dev/Unity-dev/ProjectBoostMarco/Project Boost/Library/PackageCache/com.unity.visualscripting@1.6.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"Library/Bee/artifacts/200b0aE.dag/Cinemachine.ref.dll"
+-r:"Library/Bee/artifacts/200b0aE.dag/com.unity.cinemachine.editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.Rider.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.TextMeshPro.Editor.ref.dll"
@@ -324,6 +327,8 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/VSSettingsProvider.ref.dll"
 "Assets/Scripts/CollisionHandler.cs"
 "Assets/Scripts/Movement.cs"
+"Assets/Scripts/Oscillator.cs"
+"Assets/Scripts/QuitApplication.cs"
 -langversion:8.0
 
 /deterministic

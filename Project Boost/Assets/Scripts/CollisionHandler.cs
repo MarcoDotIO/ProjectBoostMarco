@@ -35,11 +35,13 @@ public class CollisionHandler : MonoBehaviour
 
     void Start()
     {
+        // Getting rocket audio source from audio source class
         rocketCollisionAudioSource = GetComponent<AudioSource>();
     }
 
     void Update()
     {
+        // Responding to debug input
         RespondToDebugKeys();
     }
 
@@ -47,6 +49,7 @@ public class CollisionHandler : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
+            // Go to the next level
             LoadNextLevel();
         }
 

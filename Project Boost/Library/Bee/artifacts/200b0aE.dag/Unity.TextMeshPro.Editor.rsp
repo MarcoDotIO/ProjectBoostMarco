@@ -310,6 +310,7 @@
 -r:"/Applications/Unity/Hub/Editor/2021.1.15f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/System.Xml.dll"
 -r:"/Applications/Unity/Hub/Editor/2021.1.15f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/System.Xml.Linq.dll"
 -r:"/Applications/Unity/Hub/Editor/2021.1.15f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll"
+-r:"/Volumes/Backups-SAMSUNG/Root-Dir-Backup Jul 16 2021/dev/3D-dev/Unity-dev/ProjectBoostMarco/Project Boost/Library/PackageCache/com.unity.cinemachine@2.7.4/Runtime/ThirdParty/clipper_library.dll"
 -r:"/Volumes/Backups-SAMSUNG/Root-Dir-Backup Jul 16 2021/dev/3D-dev/Unity-dev/ProjectBoostMarco/Project Boost/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/log4netPlastic.dll"
 -r:"/Volumes/Backups-SAMSUNG/Root-Dir-Backup Jul 16 2021/dev/3D-dev/Unity-dev/ProjectBoostMarco/Project Boost/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll"
 -r:"/Volumes/Backups-SAMSUNG/Root-Dir-Backup Jul 16 2021/dev/3D-dev/Unity-dev/ProjectBoostMarco/Project Boost/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/unityplastic.dll"

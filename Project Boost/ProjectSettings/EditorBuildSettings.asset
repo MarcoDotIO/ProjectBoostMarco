@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/PBSandBox Level 1.unity
+    path: Assets/Scenes/Level 1 - Upper Layer.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/PBSandBox Level 2.unity
+    path: Assets/Scenes/Level 2 - Deeper Layer.unity
     guid: 05139ba9ebd6b4c069e0bae9372a58a6
   - enabled: 1
-    path: Assets/Scenes/PBSandBox Level 3.unity
+    path: Assets/Scenes/Level 3 - Core.unity
     guid: bbea231b18d5a46b79a285f71d433526
   m_configObjects: {}
